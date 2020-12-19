@@ -53,7 +53,7 @@ body{
     padding: 8px 0px;
 }
 .nav-item:not(:last-child){
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid #ddd;
 }
 .nav-item:last-child{
     border-radius: 0 0 4px 4px;
@@ -69,6 +69,7 @@ body{
     text-align: center;
     border-radius: 4px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    outline: 16px solid  #62B68A;
 }
 
 .flexbox-container .profile img{
@@ -102,26 +103,71 @@ body{
     height: 70%;
 
 }
-.profile a {
+.title {
+    font-size: 34px;
+    font-weight: 500;
+    text-transform: capitalize;
+    padding: 16px 0px;
+    color: #323232;
+}
+.subtitle {
+    color: #78cc6d;
+    font-weight: 400;
+}
+.subtitle span {
+    display: inline-block;
+    animation-name: typing;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    overflow: hidden;
+    white-space: nowrap;
+}
+@keyframes typing{
+    from{width: 0%;}
+    to{width: 100%;}
+}
+
+.socials i {
+    padding: 16px 8px;
+}
+.buttons {
+    display: block;
+    overflow: hidden;
+    margin-top: 15%;
+    border: 1px solid #ddd;
+}
+.buttons a {
     display: block;
     font-size: 12px;
     font-weight: 500;
     text-transform: uppercase;
     text-decoration: none;
-    padding: 16px;
-    border: 1px;
+    padding: 24px;
     color: #323232;
+    float: left;
+    width: 50%;
 }
-.profile a:hover{
+.buttons a:not(:last-child){
+    border-right: 1px solid #ddd;
+}
+
+.buttons a:hover{
     color: #78cc6d;
 }
 
 .flexbox-container .content{
     flex: 0 0 55%;
-    outline: 16px solid  #62B68A;
 }
 .content-container{
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 4px;
     padding: 32px;
+    overflow: hidden;
+}
+.tabcontent{
+    float: left;
+    padding: 0px 16px;
+    border: 1px solid #ccc;
+    width: 100%;
+    height: auto;
 }

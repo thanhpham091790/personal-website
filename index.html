@@ -11,82 +11,25 @@
     <div class="flexbox-container">
         <div class="flexbox-item navbar">
             <div class="navbar-container">
-                <div class="nav-item active">
+                <div class="nav-item tablinks active" onclick="openTab(event, 'about')" id="defaultOpen">
                     <i class="fa fa-user fa-lg" aria-hidden="true"></i>
                     <a href="#about">About</a>
                 </div>
-                <div class="nav-item">
+                <div class="nav-item tablinks" onclick="openTab(event, 'experiences')">
                     <i class="fa fa-file-text fa-lg" aria-hidden="true"></i>
                     <a href="#experience">Experience</a>
                 </div>
-                <div class="nav-item">
+                <div class="nav-item tablinks" onclick="openTab(event, 'education')">
                     <i class="fa fa-graduation-cap fa-lg" aria-hidden="true"></i>
                     <a href="#education">Education</a>
                 </div>
-                <div class="nav-item">
+                <div class="nav-item tablinks" onclick="openTab(event, 'porfolios')" >
                     <i class="fa fa-trophy fa-lg" aria-hidden="true"></i>
                     <a href="#porfolios">Porfolios</a>
                 </div>
-                <div class="nav-item">
+                <div class="nav-item tablinks" onclick="openTab(event, 'contact')" >
                     <i class="fa fa-envelope fa-lg" aria-hidden="true"></i>
                     <a href="#contact">Contact</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="flexbox-item content">
-            <div class="content-container">
-                <div class="about">
-                    <h2><span>About</span> me</h2>
-                    <p>My name is Thanh Pham
-                        I graduated with a Master degree in Computer Science from Colorado Technical University. I had
-                        spent
-                        three years as a web developer with Netbase JSC, in PHP developer, and technical team leader
-                        roles.
-                        They are one of the top outsourcing companies in Vietnam who focus on a total e-commerce
-                        solutions
-                        and consulting for all e-commerce businesses to sell products and services on the internet.
-                        During
-                        my time with the company, I was trained and obtained a lot experiences from their tasks and
-                        projects.
-                        Besides working with professional companies, I also work as a freelancer. I build websites that
-                        provide information about local business in Colorado.
-                        Thank you for your time and consideration. I wish you have a great day.
-                        Sincerely
-                        Thanh Pham
-                    </p>
-                </div>
-                <div class="experiences">
-                    <h2><span>About</span> me</h2>
-                    <p>I am Ryan Adlard, web designer from USA, California. I have rich experience in web site design
-                        and
-                        building and customization, also I am good at wordpress. I love to talk with you about our
-                        unique.
-                    </p>
-                </div>
-                <div class="education">
-                    <h2><span>About</span> me</h2>
-                    <p>I am Ryan Adlard, web designer from USA, California. I have rich experience in web site design
-                        and
-                        building and customization, also I am good at wordpress. I love to talk with you about our
-                        unique.
-                    </p>
-                </div>
-                <div class="education">
-                    <h2><span>About</span> me</h2>
-                    <p>I am Ryan Adlard, web designer from USA, California. I have rich experience in web site design
-                        and
-                        building and customization, also I am good at wordpress. I love to talk with you about our
-                        unique.
-                    </p>
-                </div>
-                <div class="education">
-                    <h2><span>About</span> me</h2>
-                    <p>I am Ryan Adlard, web designer from USA, California. I have rich experience in web site design
-                        and
-                        building and customization, also I am good at wordpress. I love to talk with you about our
-                        unique.
-                    </p>
                 </div>
             </div>
         </div>
@@ -97,7 +40,7 @@
                     <img src="https://bslthemes.com/ryan/demo/images/man5_big.jpg">
                 </div>
                 <div class="title">
-                    <span>Thanh H Pham</span>
+                    <span>Thanh Pham</span>
                 </div>
                 <div class="subtitle">
                     <span>Web Developer</span>
@@ -113,7 +56,50 @@
                 </div>
             </div>
         </div>
-    </div>
-</body>
 
+        <div class="flexbox-item content">
+            <div class="content-container">
+                <div id="about" class="tabcontent">
+                    <h2>About</h2>
+                </div>
+                <div id="experiences" class="tabcontent">
+                    <h2>Experiences</h2>
+                </div>
+                <div id="education" class="tabcontent">
+                    <h2>Education</h2>
+                </div>
+                <div id="porfolios" class="tabcontent">
+                    <h2>Porfolios</h2>
+                </div>
+                <div id="contact" class="tabcontent">
+                    <h2>Contact</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function openTab(event, tabName){
+            // Declare all variables
+            var i, tabcontent, tablinks;
+
+            // Get all elements with class="tabcontent" and hide them
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for(i=0;i<tabcontent.length;i++){
+                tabcontent[i].style.display = "none";
+            }
+
+            // Get all elements with class="tablinks" and remove the class "active"
+            tablinks = document.getElementsByClassName("tablinks");
+            for(i=0;i<tablinks.length;i++){
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Show current tab, and add an "active" class to the link that opened the tab
+            document.getElementById(tabName).style.display = "block";
+            event.currentTarget.className += " active";
+        }
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+</body>
 </html>
