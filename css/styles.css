@@ -219,22 +219,21 @@ body {
     text-indent: 5%;
 }
 
-#experiences .companies, #education .degrees, #skills .languages{
+#experiences .companies, #education .degrees, #skills .languages, #porfolios .projects{
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
     align-content: center;
-    padding: 24px;
 }
-#experiences .group, #education .group, #skills .group {
+#experiences .group, #education .group, #skills .group, #porfolios .group {
     flex: 0 0 50%;
     max-width: 50%;
     text-align: center;
     color: #323232;
 }
-.group{ padding: 16px;}
+.group{ padding: 24px;}
 .group:not(:last-child){
     border-right: 1px solid #ddd;
 }
@@ -249,6 +248,10 @@ body {
     height: 100px;
     border-radius: 50%;
     border: 1px solid #E03749;
+}
+#porfolios .group img{
+    width: 100%;
+    height: auto;
 }
 #experiences .title, #education .title {
     font-size: 12px;
