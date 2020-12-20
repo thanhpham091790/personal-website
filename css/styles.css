@@ -184,7 +184,7 @@ body {
 }
 
 .content-container {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 1);
     border-radius: 4px;
     overflow: hidden;
 }
@@ -219,7 +219,7 @@ body {
     text-indent: 5%;
 }
 
-#experiences .works {
+#experiences .companies, #education .degrees, #skills .languages{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -228,20 +228,41 @@ body {
     align-content: center;
     padding: 24px;
 }
-#experiences .job {
+#experiences .group, #education .group, #skills .group {
     flex: 0 0 50%;
     max-width: 50%;
     text-align: center;
     color: #323232;
 }
-#experiences .job img{
+.group{ padding: 16px;}
+.group:not(:last-child){
+    border-right: 1px solid #ddd;
+}
+#experiences .group img{
     width: 100px;
     height: 100px;
     border-radius: 50%;
     border: 1px solid #0088E1;
 }
-#experiences .title {
+#education .group img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid #E03749;
+}
+#experiences .title, #education .title {
     font-size: 12px;
     font-weight: 500;
     text-transform: uppercase;
 }
+#skills .container{
+    width: 100%;
+    background-color: #ddd;
+}
+#skills .container .lang{
+    text-align: right;
+    color: white;
+}
+.html{width: 90%;background-color: #0088E1;}
+.css{width: 80%;background-color: #0088E1;}
+.js{width: 65%;background-color: #0088E1;}
