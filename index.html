@@ -23,11 +23,11 @@
                     <i class="fa fa-graduation-cap fa-lg" aria-hidden="true"></i>
                     <a href="#education">Education</a>
                 </div>
-                <div class="nav-item tablinks" onclick="openTab(event, 'porfolios')" >
+                <div class="nav-item tablinks" onclick="openTab(event, 'porfolios')">
                     <i class="fa fa-trophy fa-lg" aria-hidden="true"></i>
                     <a href="#porfolios">Porfolios</a>
                 </div>
-                <div class="nav-item tablinks" onclick="openTab(event, 'contact')" >
+                <div class="nav-item tablinks" onclick="openTab(event, 'contact')">
                     <i class="fa fa-envelope fa-lg" aria-hidden="true"></i>
                     <a href="#contact">Contact</a>
                 </div>
@@ -60,7 +60,26 @@
         <div class="flexbox-item content">
             <div class="content-container">
                 <div id="about" class="tabcontent">
-                    <h2>About</h2>
+                    <div class="tab-title">
+                        <h2>About</h2>
+                    </div>
+                    <div class="introduction">
+                        <p>My name is Thanh Pham. I graduated with a Master degree in Computer Science from Colorado
+                            Technical University. I had spent three years as a web developer with Netbase JSC, in PHP
+                            developer, and technical team leader roles. They are one of the top outsourcing companies in
+                            Vietnam who focus on a total e-commerce solutions and consulting for all e-commerce
+                            businesses to sell products and services on the internet. During my time with the company, I
+                            was trained and obtained a lot experiences from their tasks and projects.
+                        </p>
+                        <p>
+                            Besides working with professional companies, I also work as a freelancer. I build websites
+                            that provide information about local business in Colorado.Thank you for your time and consideration. I wish you have a great day.
+                        </p>
+                        <p>
+                            Sincerely
+                            <p class="signature">Thanh Pham</p>
+                        </p>
+                    </div>
                 </div>
                 <div id="experiences" class="tabcontent">
                     <h2>Experiences</h2>
@@ -77,29 +96,7 @@
             </div>
         </div>
     </div>
-    <script>
-        function openTab(event, tabName){
-            // Declare all variables
-            var i, tabcontent, tablinks;
-
-            // Get all elements with class="tabcontent" and hide them
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for(i=0;i<tabcontent.length;i++){
-                tabcontent[i].style.display = "none";
-            }
-
-            // Get all elements with class="tablinks" and remove the class "active"
-            tablinks = document.getElementsByClassName("tablinks");
-            for(i=0;i<tablinks.length;i++){
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-
-            // Show current tab, and add an "active" class to the link that opened the tab
-            document.getElementById(tabName).style.display = "block";
-            event.currentTarget.className += " active";
-        }
-        // Get the element with id="defaultOpen" and click on it
-        document.getElementById("defaultOpen").click();
-    </script>
+    <script src="./js/scripts.js"></script>
 </body>
+
 </html>

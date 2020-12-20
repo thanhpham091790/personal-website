@@ -1,22 +1,24 @@
-*{
+* {
     box-sizing: border-box;
 }
-html, body{
+
+html, body {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
 }
-body{
+
+body {
     background: linear-gradient(to bottom right, #50a3a2, #78cc6d);
     position: relative;
 }
+
 .flexbox-container {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
-
+    transform: translate(-50%, -50%);
     display: flex;
     -webkit-display: flex;
     flex-direction: row;
@@ -30,20 +32,23 @@ body{
     max-height: 674px;
 }
 
-.flexbox-container .navbar{
+.flexbox-container .navbar {
     flex: 0 0 5%;
     margin-right: 16px;
 }
-.nav-item{
+
+.nav-item {
     display: block;
     text-align: center;
     padding: 16px 8px;
     background-color: white;
 }
-.nav-item.active a, .nav-item.active , .nav-item:hover a, .nav-item:hover i{
-    color: #78cc6d; 
+
+.nav-item.active a, .nav-item.active, .nav-item:hover a, .nav-item:hover i {
+    color: #78cc6d;
 }
-.nav-item a{
+
+.nav-item a {
     font-size: 12px;
     text-decoration: none;
     color: #323232;
@@ -52,35 +57,39 @@ body{
     display: block;
     padding: 8px 0px;
 }
-.nav-item:not(:last-child){
+
+.nav-item:not(:last-child) {
     border-bottom: 1px solid #ddd;
 }
-.nav-item:last-child{
+
+.nav-item:last-child {
     border-radius: 0 0 4px 4px;
 }
-.nav-item:first-child{
+
+.nav-item:first-child {
     border-radius: 4px 4px 0 0;
 }
 
-
-.flexbox-container .profile{
+.flexbox-container .profile {
     flex: 0 0 40%;
     background: white;
     text-align: center;
     border-radius: 4px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    outline: 16px solid  #62B68A;
+    outline: 16px solid #62B68A;
 }
 
-.flexbox-container .profile img{
+.flexbox-container .profile img {
     width: 100%;
     height: auto;
 }
-.image{
+
+.image {
     position: relative;
     overflow: hidden;
 }
-.image::before{
+
+.image::before {
     content: "";
     display: block;
     position: absolute;
@@ -91,7 +100,8 @@ body{
     width: 100%;
     height: 70%;
 }
-.image::after{
+
+.image::after {
     content: "";
     display: block;
     position: absolute;
@@ -101,8 +111,8 @@ body{
     bottom: -62%;
     width: 100%;
     height: 70%;
-
 }
+
 .title {
     font-size: 34px;
     font-weight: 500;
@@ -110,10 +120,12 @@ body{
     padding: 16px 0px;
     color: #323232;
 }
+
 .subtitle {
     color: #78cc6d;
     font-weight: 400;
 }
+
 .subtitle span {
     display: inline-block;
     animation-name: typing;
@@ -122,20 +134,27 @@ body{
     overflow: hidden;
     white-space: nowrap;
 }
-@keyframes typing{
-    from{width: 0%;}
-    to{width: 100%;}
+
+@keyframes typing {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
 }
 
 .socials i {
     padding: 16px 8px;
 }
+
 .buttons {
     display: block;
     overflow: hidden;
     margin-top: 15%;
     border: 1px solid #ddd;
 }
+
 .buttons a {
     display: block;
     font-size: 12px;
@@ -147,27 +166,54 @@ body{
     float: left;
     width: 50%;
 }
-.buttons a:not(:last-child){
+
+.buttons a:not(:last-child) {
     border-right: 1px solid #ddd;
 }
 
-.buttons a:hover{
+.buttons a:hover {
     color: #78cc6d;
 }
 
-.flexbox-container .content{
+.flexbox-container .content {
     flex: 0 0 55%;
+    max-width: 55%;
+    max-height: 85%;
+    overflow: auto;
 }
-.content-container{
+
+.content-container {
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 4px;
-    padding: 32px;
     overflow: hidden;
 }
-.tabcontent{
+
+.tabcontent {
     float: left;
-    padding: 0px 16px;
-    border: 1px solid #ccc;
     width: 100%;
     height: auto;
+}
+
+.tabcontent .tab-title {
+    border-bottom: 1px solid #ddd;
+    padding: 24px;
+    color: #78cc6d;
+}
+
+.tabcontent .tab-title h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.tabcontent .introduction {
+    border: 1px solid #ddd;
+    padding: 24px;
+    font-size: 16px;
+    line-height: 32px;
+    word-break: keep-all;
+}
+
+.introduction p {
+    margin: 0px 0px 16px 0px;
+    text-indent: 5%;
 }
