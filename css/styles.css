@@ -10,7 +10,7 @@ html, body {
 }
 
 body {
-    background: linear-gradient(to bottom right, #50a3a2, #78cc6d);
+    background: linear-gradient(to bottom right, #50a3a2, #0088E1);
     position: relative;
 }
 
@@ -45,7 +45,7 @@ body {
 }
 
 .nav-item.active a, .nav-item.active, .nav-item:hover a, .nav-item:hover i {
-    color: #78cc6d;
+    color: #0088E1;
 }
 
 .nav-item a {
@@ -113,7 +113,7 @@ body {
     height: 70%;
 }
 
-.title {
+.profile .title {
     font-size: 34px;
     font-weight: 500;
     text-transform: capitalize;
@@ -122,7 +122,7 @@ body {
 }
 
 .subtitle {
-    color: #78cc6d;
+    color: #0088E1;
     font-weight: 400;
 }
 
@@ -172,7 +172,7 @@ body {
 }
 
 .buttons a:hover {
-    color: #78cc6d;
+    color: #0088E1;
 }
 
 .flexbox-container .content {
@@ -180,6 +180,7 @@ body {
     max-width: 55%;
     max-height: 85%;
     overflow: auto;
+    margin-left: 16px;
 }
 
 .content-container {
@@ -197,7 +198,8 @@ body {
 .tabcontent .tab-title {
     border-bottom: 1px solid #ddd;
     padding: 24px;
-    color: #78cc6d;
+    color: #0088E1;
+    text-indent: 5%;
 }
 
 .tabcontent .tab-title h2 {
@@ -205,15 +207,41 @@ body {
     padding: 0;
 }
 
-.tabcontent .introduction {
-    border: 1px solid #ddd;
+#about .introduction {
     padding: 24px;
     font-size: 16px;
     line-height: 32px;
     word-break: keep-all;
 }
 
-.introduction p {
+#about .introduction p {
     margin: 0px 0px 16px 0px;
     text-indent: 5%;
+}
+
+#experiences .works {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: center;
+    padding: 24px;
+}
+#experiences .job {
+    flex: 0 0 50%;
+    max-width: 50%;
+    text-align: center;
+    color: #323232;
+}
+#experiences .job img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid #0088E1;
+}
+#experiences .title {
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
 }
