@@ -54,7 +54,6 @@ body {
     flex: 0 0 55%;
     max-width: 55%;
     background-color: white;
-    border: 1px solid #ddd;
 }
 
 .nav-item {
@@ -152,7 +151,8 @@ body {
 .buttons {
     display: block;
     overflow: hidden;
-    border: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
 }
 
 .buttons a {
@@ -267,6 +267,8 @@ body {
     }
     .nav-item {
         float: left;
+        border-right: 1px solid #ddd;
+        border-bottom: none;
     }
     .flexbox-container .profile-content {
         flex: 0 0 100%;
