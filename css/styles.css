@@ -11,14 +11,14 @@ html, body {
 
 body {
     background: linear-gradient(to bottom right, #50a3a2, #0088E1);
-    display: flex;
-    justify-content: center;
 }
 
 .flexbox-container {
-    flex: 0 0 80%;
-    max-width: 80%;
-    align-self: center;
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
     display: flex;
     -webkit-display: flex;
@@ -178,7 +178,8 @@ body {
 .tabcontent {
     float: left;
     width: 100%;
-    height: auto;
+    max-height: 75vh;
+    overflow: auto;
 }
 
 .tabcontent .tab-title {
@@ -279,6 +280,12 @@ body {
     }
 }
 @media screen and (max-width: 767.98px){
+    .flexbox-container{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0%);
+    }
     .flexbox-container .profile-content {
         flex-direction: column;
     }
@@ -286,7 +293,7 @@ body {
         order: 1;
     }
     .profile-content .content {
-        order: 1;
+        order: 2;
     }
     .profile-content .profile {
         flex: 0 0 100%;
@@ -297,8 +304,20 @@ body {
         max-width: 100%;
     }
 }
+
 @media screen and (max-width: 575.98px){
-    .nav-item a {
-        display: none;
+    .nav-item {
+        float: none;
+        display: inline-block;
+    }
+    .navbar-container {
+        overflow: auto;
+        white-space: nowrap;
+    }
+    .profile-content .profile {
+        order: 2;
+    }
+    .profile-content .content {
+        order: 1;
     }
 }
