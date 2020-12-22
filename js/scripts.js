@@ -20,3 +20,47 @@ function openTab(event, tabName) {
 }
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
+
+function myMap() {
+    var mapOptions = {
+        center: new google.maps.LatLng(39.58750084486547, -104.98772658929445),
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        panControl: true,
+
+        zoom: 15,
+        zoomControl: true,
+        zoomControlOptions: {
+            style: google.maps.ZoomControlStyle.DEFAULT
+        },
+        mapTypeControl: true,
+        scaleControl: true,
+        streetViewControl: true,
+        overviewMapControl: true,
+        rotateControl: true,
+        fullscreenControl: true,
+        disableDefaultUI: true
+    };
+    var map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
+
+    var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(39.58750084486547, -104.98772658929445),
+        animation: google.maps.Animation.BOUNCE
+    });
+    marker.setMap(map);
+
+    var infoWindow = new google.maps.InfoWindow({
+        content: "7179 S Lincoln Way, Centennial, CO 80122"
+    });
+    google.maps.event.addListener(marker, 'click', function () {
+        var pos = map.getZoom();
+
+        map.setZoom(17);
+        map.setCenter(marker.getPosition());
+
+        window.setTimeout(function () {
+            map.setZoom(pos);
+        }, 3000);
+
+        infoWindow.open(map, marker);
+    });
+}
