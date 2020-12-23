@@ -114,16 +114,16 @@ body {
 }
 
 .profile .title {
-    font-size: 34px;
-    font-weight: 500;
-    text-transform: capitalize;
-    padding: 16px 0px;
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
     color: #323232;
 }
 
 .subtitle {
     color: #0088E1;
     font-weight: 400;
+    font-size: 20px;
 }
 
 .subtitle span {
@@ -213,7 +213,7 @@ body {
     text-indent: 5%;
 }
 
-#experiences .companies, #education .degrees, #skills .languages, #porfolios .projects{
+#experiences .companies, #education .degrees, #skills .languages, #portfolios .projects{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -221,7 +221,7 @@ body {
     align-items: flex-start;
     align-content: center;
 }
-#experiences .group, #education .group, #skills .group, #porfolios .group {
+#experiences .group, #education .group, #skills .group, #portfolios .group {
     flex: 0 0 50%;
     max-width: 50%;
     text-align: center;
@@ -243,11 +243,11 @@ body {
     border-radius: 50%;
     border: 1px solid #E03749;
 }
-#porfolios .group img{
+#portfolios .group img{
     width: 100%;
     height: auto;
 }
-#porfolios .group img:hover{
+#portfolios .group img:hover{
     border: 1px solid #0088E1;
     border-radius: 4px;
 }
@@ -265,8 +265,11 @@ body {
     color: white;
 }
 .html{width: 90%;background-color: #0088E1;}
-.css{width: 80%;background-color: #0088E1;}
-.js{width: 65%;background-color: #0088E1;}
+.css{width: 70%;background-color: #0088E1;}
+.js{width: 80%;background-color: #0088E1;}
+.php{width: 80%;background-color: #0088E1;}
+.sql{width: 70%;background-color: #0088E1;}
+.react{width: 75%;background-color: #0088E1;}
 
 #contact .fa{
     padding: 4px;
@@ -332,5 +335,9 @@ body {
     .navbar-container {
         overflow: auto;
         white-space: nowrap;
+    }
+    #experiences .group, #education .group, #portfolios .group {
+        flex: 0 0 100%;
+        max-width: 100%;
     }
 }
