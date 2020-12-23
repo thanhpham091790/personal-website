@@ -146,6 +146,7 @@ body {
 
 .socials i {
     padding: 16px 8px;
+    color: #323232;
 }
 
 .buttons {
@@ -174,7 +175,13 @@ body {
 .buttons a:hover {
     color: #0088E1;
 }
-
+.projects a {
+    color: #323232;
+    text-decoration: none;
+}
+.projects a:hover{
+    color: #0088E1;
+}
 .tabcontent {
     float: left;
     width: 100%;
@@ -240,6 +247,10 @@ body {
     width: 100%;
     height: auto;
 }
+#porfolios .group img:hover{
+    border: 1px solid #0088E1;
+    border-radius: 4px;
+}
 #experiences .title, #education .title {
     font-size: 12px;
     font-weight: 500;
@@ -256,6 +267,10 @@ body {
 .html{width: 90%;background-color: #0088E1;}
 .css{width: 80%;background-color: #0088E1;}
 .js{width: 65%;background-color: #0088E1;}
+
+#contact .fa{
+    padding: 4px;
+}
 
 @media screen and (max-width: 1199.98px){
     .flexbox-container {
@@ -287,15 +302,16 @@ body {
         top: 0;
         left: 50%;
         transform: translate(-50%, 0%);
+        width: 100%;
     }
     .flexbox-container .profile-content {
         flex-direction: column;
     }
     .profile-content .profile {
-        order: 1;
+        order: 2;
     }
     .profile-content .content {
-        order: 2;
+        order: 1;
     }
     .profile-content .profile {
         flex: 0 0 100%;
@@ -308,9 +324,7 @@ body {
 }
 
 @media screen and (max-width: 575.98px){
-    .flexbox-container{
-       width: 100%;
-    }
+    
     .nav-item {
         float: none;
         display: inline-block;
@@ -318,11 +332,5 @@ body {
     .navbar-container {
         overflow: auto;
         white-space: nowrap;
-    }
-    .profile-content .profile {
-        order: 2;
-    }
-    .profile-content .content {
-        order: 1;
     }
 }

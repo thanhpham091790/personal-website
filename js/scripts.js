@@ -18,8 +18,12 @@ function openTab(event, tabName) {
     document.getElementById(tabName).style.display = "block";
     event.currentTarget.className += " active";
 }
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
+// Get the element with id="aboutTab" and click on it
+document.getElementById("aboutTab").click();
+
+function contactMe(){
+    document.getElementById("contactTab").click();
+}
 
 function myMap() {
     var mapOptions = {

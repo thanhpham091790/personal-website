@@ -11,29 +11,29 @@
     <div class="flexbox-container">
         <div class="navbar">
             <div class="navbar-container">
-                <div class="nav-item tablinks active" onclick="openTab(event, 'about')" id="defaultOpen">
+                <div class="nav-item tablinks active" onclick="openTab(event, 'about')" id="aboutTab">
                     <i class="fa fa-user fa-lg" aria-hidden="true"></i>
-                    <a href="#about">About</a>
+                    <a href="#">About</a>
                 </div>
-                <div class="nav-item tablinks" onclick="openTab(event, 'experiences')">
+                <div class="nav-item tablinks" onclick="openTab(event, 'experiences')" id="experiencesTab">
                     <i class="fa fa-file-text fa-lg" aria-hidden="true"></i>
-                    <a href="#experience">Experience</a>
+                    <a href="#">Experience</a>
                 </div>
-                <div class="nav-item tablinks" onclick="openTab(event, 'education')">
+                <div class="nav-item tablinks" onclick="openTab(event, 'education')" id="educationTab">
                     <i class="fa fa-graduation-cap fa-lg" aria-hidden="true"></i>
-                    <a href="#education">Education</a>
+                    <a href="#">Education</a>
                 </div>
-                <div class="nav-item tablinks" onclick="openTab(event, 'skills')">
+                <div class="nav-item tablinks" onclick="openTab(event, 'skills')" id="skillsTab">
                     <i class="fa fa-align-right fa-lg" aria-hidden="true"></i>
-                    <a href="#skills">Skills</a>
+                    <a href="#">Skills</a>
                 </div>
-                <div class="nav-item tablinks" onclick="openTab(event, 'porfolios')">
+                <div class="nav-item tablinks" onclick="openTab(event, 'porfolios')" id="porfoliosTab">
                     <i class="fa fa-trophy fa-lg" aria-hidden="true"></i>
-                    <a href="#porfolios">Porfolios</a>
+                    <a href="#">Porfolios</a>
                 </div>
-                <div class="nav-item tablinks" onclick="openTab(event, 'contact')">
+                <div class="nav-item tablinks" onclick="openTab(event, 'contact')" id="contactTab">
                     <i class="fa fa-envelope fa-lg" aria-hidden="true"></i>
-                    <a href="#contact">Contact</a>
+                    <a href="#">Contact</a>
                 </div>
             </div>
         </div>
@@ -42,7 +42,7 @@
             <div class="profile">
                 <div class="profile-container">
                     <div class="image">
-                        <img src="https://bslthemes.com/ryan/demo/images/man5_big.jpg" alt="Thanh H Pham">
+                        <img src="./media/images/profiles/thanhhpham.jpg" alt="Thanh H Pham">
                     </div>
                     <div class="title">
                         <span>Thanh Pham</span>
@@ -51,13 +51,13 @@
                         <span>Web Developer</span>
                     </div>
                     <div class="socials">
-                        <i class="fa fa-globe fa-lg" aria-hidden="true"></i>
-                        <i class="fa fa-github fa-lg" aria-hidden="true"></i>
-                        <i class="fa fa-linkedin-square fa-lg" aria-hidden="true"></i>
+                        <a href="http://www.thanhhpham.com" target="_blank"><i class="fa fa-globe fa-lg" aria-hidden="true"></i></a>
+                        <a href="https://github.com/thanhpham091790" target="_blank"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
+                        <a href="https://www.linkedin.com/thanhpham091790" target="_blank"><i class="fa fa-linkedin-square fa-lg" aria-hidden="true"></i></a>
                     </div>
                     <div class="buttons">
-                        <a href="#">Download Resume</a>
-                        <a href="#">Contact Me</a>
+                        <a href="./resume/ThanhPham_Cover_Letter_Resume.pdf">Download Resume</a>
+                        <a href="#" onclick="contactMe()">Contact Me</a>
                     </div>
                 </div>
             </div>
@@ -209,57 +209,34 @@
                         </div>
                         <div class="projects">
                             <div class="group">
-                                <div class="logo"><img src="./media/images/porfolios/personal.jpg"
-                                        alt="Resume/Porfolios Website">
+                                <div class="logo"><a href="#"><img src="./media/images/porfolios/company.png" alt="Company Webiste">
+                                </div></a>
+                                <div class="title"><a href="#"><span>Company Webiste - Landing Page</span></a></div>
+                            </div>
+                            <div class="group">
+                                <div class="logo"><a href="http://www.upscalenaildenver.com"><img src="./media/images/porfolios/salon.jpg" alt="Salon Website">
+                                </div></a>
+                                <div class="title"><a href="http://www.upscalenaildenver.com"><span>Salon Website - Langding Page</span></a></div>
+                            </div>
+                            <div class="group">
+                                <div class="logo"><a href="#"><img src="./media/images/porfolios/faq.jpg" alt="FAQ"></div>
+                                <div class="title"><a href="#"><span>FAQ - Magento Extensions</span></a></div></a>
+                            </div>
+                            <div class="group">
+                                <div class="logo"><a href="#"><img src="./media/images/porfolios/frequently.jpg"
+                                        alt="Frequently Bought Together"></div></a>
+                                <div class="title"><a href="#"><span>Frequently Bought Together - Magento Extension</span></a></div>
+                            </div>
+                            <div class="group">
+                                <div class="logo"><a href="#"><img src="./media/images/porfolios/price_matrix.jpg"
+                                        alt="Price Matrix"></a>
                                 </div>
-                                <div class="title"><span>Resume/Porfolios Website</span></div>
+                                <div class="title"><a href="#"><span>Price Matrix - Magento Extension</span></a></div>
                             </div>
                             <div class="group">
-                                <div class="logo"><img src="./media/images/porfolios/company.png" alt="Company Webiste">
-                                </div>
-                                <div class="title"><span>Company Webiste - Landing Page</span></div>
-                            </div>
-                            <div class="group">
-                                <div class="logo"><img src="./media/images/porfolios/salon.jpg" alt="Salon Website">
-                                </div>
-                                <div class="title"><span>Salon Website - Langding Page</span></div>
-                            </div>
-                            <div class="group">
-                                <div class="logo"><img src="./media/images/porfolios/callforprice.jpg"
-                                        alt="Call For Price">
-                                </div>
-                                <div class="title"><span>Call For Price - Magento Extenstion</span></div>
-                            </div>
-                            <div class="group">
-                                <div class="logo"><img src="./media/images/porfolios/faq.jpg" alt="FAQ"></div>
-                                <div class="title"><span>FAQ - Magento Extensions</span></div>
-                            </div>
-                            <div class="group">
-                                <div class="logo"><img src="./media/images/porfolios/frequently.jpg"
-                                        alt="Frequently Bought Together"></div>
-                                <div class="title"><span>Frequently Bought Together - Magento Extension</span></div>
-                            </div>
-                            <div class="group">
-                                <div class="logo"><img src="./media/images/porfolios/price_matrix.jpg"
-                                        alt="Price Matrix">
-                                </div>
-                                <div class="title"><span>Price Matrix - Magento Extension</span></div>
-                            </div>
-                            <div class="group">
-                                <div class="logo"><img src="./media/images/porfolios/product_video.jpg"
-                                        alt="Product Video">
-                                </div>
-                                <div class="title"><span>Product Video - - Magento Extension</span></div>
-                            </div>
-                            <div class="group">
-                                <div class="logo"><img src="./media/images/porfolios/shipping_cost.jpg"
-                                        alt="Shipping Cost Calculator"></div>
-                                <div class="title"><span>Shipping Cost Calculator - Magento Extension</span></div>
-                            </div>
-                            <div class="group">
-                                <div class="logo"><img src="./media/images/porfolios/store_locator.jpg"
-                                        alt="Store Locator Extension"></div>
-                                <div class="title"><span>Store Locator Extension - Magento Extension</span></div>
+                                <div class="logo"><a href="#"><img src="./media/images/porfolios/shipping_cost.jpg"
+                                        alt="Shipping Cost Calculator"></div></a>
+                                <div class="title"><a href="#"><span>Shipping Cost Calculator - Magento Extension</span></a></div>
                             </div>
                         </div>
                     </div>
@@ -268,6 +245,23 @@
                             <h2>Contact</h2>
                         </div>
                         <div class="get-in-touch">
+                            <div class="group">
+                                <p>
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                    <span>Thanh H Pham</span>
+                                </p>
+                                <p>
+                                    <i class="fa fa-location-arrow" aria-hidden="true"></i>
+                                    <span>7179 S Lincoln Way, Centennial, CO 80122</span>
+                                </p>
+                                <p>
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                    <span>(720) 397 2824</span></p>
+                                <p>
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                    <span>thanhpham091790@gmail.com</span>
+                                </p>
+                            </div>
                             <div class="group">
                                 <div id="googleMap" style="width:100%;height:400px;"></div>
                             </div>
